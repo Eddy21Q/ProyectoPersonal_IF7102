@@ -36,25 +36,16 @@ Este documento registra el proceso de aprendizaje, los recursos consultados y la
 
 ---
 
-## 3. Recursos Multimedia y Licencias
 
-*(Se completará cuando los medios estén definidos)*
 
-- **Fotografías:** por definir  
-- **Audio:** por definir  
-- **Video:** por definir  
-- **Licencias:** Creative Commons / Producción propia según corresponda  
-
----
-
-## 4. Uso de IA como Apoyo
+## 3. Uso de IA como Apoyo
 
 - **Microsoft Copilot**  
   Consultas sobre estructura del proyecto, interpretación del documento oficial, guía para iniciar el repositorio, creación de la estructura base del `REFERENCIAS.md` y planificación del proyecto con Vue 3.
 
 ---
 
-## 5. Notas de Aprendizaje Personal
+## 4. Notas de Aprendizaje Personal
 
 - Elegí **Vue 3** por su curva de aprendizaje suave y su similitud con HTML, CSS y JavaScript tradicionales, lo cual facilita la integración de componentes y la comprensión del flujo del desarrollo web moderno. Según la documentación oficial de Vue, su enfoque basado en componentes y su estructura de un solo archivo permite desarrollar aplicaciones de forma más organizada y escalable (Vue.js, s. f.).  
 
@@ -66,7 +57,7 @@ Este documento registra el proceso de aprendizaje, los recursos consultados y la
 
 ---
 
-## 6. Referencias (Formato APA 7)
+## 5. Referencias (Formato APA 7)
 
 - Vue.js. (s. f.). *Introduction*. Vue.js. https://vuejs.org/guide/introduction.html  
 

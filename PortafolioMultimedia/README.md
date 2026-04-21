@@ -110,6 +110,30 @@ http://localhost:5173/
 El archivo **REFERENCIAS.md** incluye:
 
 - Documentación consultada durante el desarrollo  
-- Recursos utilizados para aprender Vue 3  
-- Material multimedia empleado en el proyecto  
+- Recursos utilizados para aprender Vue 3    
 - Herramientas utilizadas como apoyo durante el proceso  
+
+##  cOMPONENTES DEL PROYECTO
+-Header.vue:
+
+Inicio | Sobre mí | Galería | Habilidades
+
+-About.vue:
+
+Foto de mi persona 
+
+Audio de autopresentación 
+
+Texto de presentación
+
+Video corto 
+
+-Gallery.vue:
+
+Se muestran mis trabajos o proyectos
+
+-Skills.vue
+Se muestran mis habilidades con animaciones
+
+-En lo que respecta a componentes reutilizables planeo utilizar skillCard.vue que recibe una habilidad por props: defineProps(['skill']).
+-Otro componente a tomar en cuenta es ProjectCard.vue que recibe un proyecto defineProps (['project']). a lo largo del desarrollo del proyecto es posible que se usen mas componentes reutilizables.
