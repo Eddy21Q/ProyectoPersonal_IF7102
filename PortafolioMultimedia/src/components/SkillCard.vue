@@ -12,13 +12,30 @@ defineProps({
 
 <style scoped>
 .skill-card {
-  padding: 1rem 1.5rem;
-  background: #222;
-  color: white;
-  border-radius: 8px;
-  transition: transform 0.2s;
+  background: #1a1a1a;
+  padding: 1rem 1.4rem;
+  border-radius: 10px;
+  color: #f2f2f2;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+  transition: transform 0.25s ease,
+              background 0.25s ease,
+              box-shadow 0.25s ease;
+  cursor: default;
 }
+
+/* Hover elegante */
 .skill-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-6px);
+  background: #222;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* Texto */
+.skill-card p {
+  margin: 0;
+  font-size: 1.1rem;
 }
 </style>

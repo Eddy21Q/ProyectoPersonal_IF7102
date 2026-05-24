@@ -1,0 +1,29 @@
+{
+  "about": {
+    "name": "Eddy Josué González Quirós",
+    "description": "Soy un informatico cuyos intereses se centran en el desarrollo web, la inteligencia artificial, Telecomunicaciones y la tecnología en general. Me apasiona aprender nuevas tecnologías y aplicarlas para resolver problemas del mundo real. Mi objetivo es seguir creciendo como desarrollador y como persona de tal manera que pueda contribuir a cumplir proyectos innovadores que tengan un impacto positivo en la sociedad.",
+    "photo": "/imagenes/Captura6_fotopersonal.png",
+    "audio": "/audio/presentacion.mp3",
+    "video": "/video/intro.mp4"
+  },
+
+  "skills": [
+    { "name": "HTML", "level": 90 },
+    { "name": "CSS", "level": 85 },
+    { "name": "JavaScript", "level": 80 },
+    { "name": "Vue 3", "level": 75 }
+  ],
+
+  "projects": [
+    {
+      "title": "Proyecto 1",
+      "image": "/images/p1.jpg",
+      "description": "Descripción del proyecto 1."
+    },
+    {
+      "title": "Proyecto 2",
+      "image": "/images/p2.jpg",
+      "description": "Descripción del proyecto 2."
+    }
+  ]
+}
