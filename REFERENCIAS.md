@@ -20,7 +20,7 @@ Este documento registra el proceso de aprendizaje, los recursos consultados y la
 
 ## 2. Tutoriales y Cursos Seguidos
 
-*(Esta sección crecerá conforme avance el proyecto)*
+
 
 - **“Vue 3 Crash Course” – Traversy Media**  
   https://www.youtube.com/watch?v=ZqgiuPt5QZo
@@ -36,16 +36,22 @@ Este documento registra el proceso de aprendizaje, los recursos consultados y la
 
 ---
 
+## 3. Lecturas Académicas Consultadas
 
+- **Navarro Morales, J. J. (2021). _Estudio de la funcionalidad de Vue 3 en aplicaciones web_**  
+  http://hdl.handle.net/10017/49951  
+  Resumen: Este trabajo analiza el uso de Vue 3 como framework front-end para el desarrollo de aplicaciones web. Explica la evolución de Vue, sus mejoras frente a versiones anteriores, la importancia de la Composition API y la utilidad de sus componentes para organizar interfaces modernas. También incluye el desarrollo de un prototipo web siguiendo fases de análisis, diseño, implementación y pruebas, por lo que sirve como referencia para justificar el uso de Vue 3 en este proyecto.
 
-## 3. Uso de IA como Apoyo
+---
+
+## 4. Uso de IA como Apoyo
 
 - **Microsoft Copilot**  
   Consultas sobre estructura del proyecto, interpretación del documento oficial, guía para iniciar el repositorio, creación de la estructura base del `REFERENCIAS.md` y planificación del proyecto con Vue 3.
 
 ---
 
-## 4. Notas de Aprendizaje Personal
+## 5. Notas de Aprendizaje Personal
 
 - Elegí **Vue 3** por su curva de aprendizaje suave y su similitud con HTML, CSS y JavaScript tradicionales, lo cual facilita la integración de componentes y la comprensión del flujo del desarrollo web moderno. Según la documentación oficial de Vue, su enfoque basado en componentes y su estructura de un solo archivo permite desarrollar aplicaciones de forma más organizada y escalable (Vue.js, s. f.).  
 
@@ -57,7 +63,7 @@ Este documento registra el proceso de aprendizaje, los recursos consultados y la
 
 ---
 
-## 5. Referencias (Formato APA 7)
+## 6. Referencias (Formato APA 7)
 
 - Vue.js. (s. f.). *Introduction*. Vue.js. https://vuejs.org/guide/introduction.html  
 
@@ -72,6 +78,8 @@ Este documento registra el proceso de aprendizaje, los recursos consultados y la
 - Vue Mastery. (s. f.). *Vue Router for Everyone*. https://www.vuemastery.com/courses/vue-router-for-everyone/  
 
 - Mozilla Foundation. (s. f.). *Using Fetch API*. https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch  
+
+- Navarro Morales, J. J. (2021). *Estudio de la funcionalidad de Vue 3 en aplicaciones web* [Trabajo Fin de Máster, Universidad de Alcalá]. Repositorio Institucional de la Universidad de Alcalá. http://hdl.handle.net/10017/49951  
 
 - Microsoft Copilot. (2026). *Asistente de inteligencia artificial*.  
 

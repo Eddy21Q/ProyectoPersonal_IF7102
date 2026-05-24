@@ -26,14 +26,12 @@ defineProps({
   cursor: default;
 }
 
-/* Hover elegante */
 .skill-card:hover {
   transform: translateY(-6px);
   background: #222;
   box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
-/* Texto */
 .skill-card p {
   margin: 0;
   font-size: 1.1rem;

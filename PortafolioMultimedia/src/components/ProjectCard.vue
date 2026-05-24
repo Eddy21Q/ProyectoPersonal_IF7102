@@ -13,25 +13,23 @@ defineProps({
 
 <style scoped>
 .project-card {
-  background: #1a1a1a;                     /* FONDO OSCURO */
+  background: #1a1a1a;                     
   padding: 1.2rem;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.5);   /* SOMBRA PROFESIONAL */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.5);   
   transition: transform 0.25s ease,
               box-shadow 0.25s ease,
               background 0.25s ease;
   cursor: pointer;
 }
 
-/* Hover elegante */
 .project-card:hover {
   transform: translateY(-6px);
   background: #222;
   box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
-/* Imagen */
 .project-card img {
   width: 100%;
   border-radius: 10px;
@@ -39,7 +37,6 @@ defineProps({
   object-fit: cover;
 }
 
-/* Título */
 .project-card h3 {
   color: #f2f2f2;
   font-size: 1.2rem;

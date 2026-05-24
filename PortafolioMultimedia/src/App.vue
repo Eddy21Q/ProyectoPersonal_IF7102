@@ -18,7 +18,7 @@ import Skills from './components/Skills.vue'
 </script>
 
 <style>
-/* ======== ESTILO GLOBAL DARK UI ======== */
+
 .app {
   background: #0d0d0d;
   min-height: 100vh;
@@ -26,16 +26,12 @@ import Skills from './components/Skills.vue'
   font-family: 'Inter', sans-serif;
 }
 
-/* ======== AJUSTE PARA PC ======== */
 .content {
-  max-width: 1300px;   /* MÁS ANCHO PARA PC */
+  max-width: 1300px;   
   margin: 0 auto;
-  padding: 4rem 3rem;  /* MÁS ESPACIO EN ESCRITORIO */
+  padding: 4rem 3rem;  
 }
 
-/* ======== RESPONSIVE ======== */
-
-/* Laptops pequeñas */
 @media (max-width: 1100px) {
   .content {
     max-width: 1000px;
@@ -43,7 +39,6 @@ import Skills from './components/Skills.vue'
   }
 }
 
-/* Tablets */
 @media (max-width: 900px) {
   .content {
     max-width: 800px;
@@ -51,7 +46,6 @@ import Skills from './components/Skills.vue'
   }
 }
 
-/* Móviles grandes */
 @media (max-width: 600px) {
   .content {
     max-width: 100%;
@@ -59,7 +53,6 @@ import Skills from './components/Skills.vue'
   }
 }
 
-/* Móviles pequeños */
 @media (max-width: 420px) {
   .content {
     padding: 1rem 0.8rem;

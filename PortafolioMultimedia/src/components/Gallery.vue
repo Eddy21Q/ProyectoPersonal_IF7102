@@ -28,35 +28,29 @@ onMounted(async () => {
 <style scoped>
 .gallery {
   padding: 2rem;
-  max-width: 1300px;   /* ANCHO REAL PARA PC */
+  max-width: 1300px;   
   margin: 0 auto;
   color: #e6e6e6;
 }
 
-/* Título */
 .gallery h2 {
   margin-bottom: 1.5rem;
   font-size: 2rem;
   font-weight: 700;
 }
 
-/* GRID RESPONSIVE */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* MÁS ANCHO */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
   gap: 2rem;
 }
 
-/* ======== RESPONSIVE ======== */
-
-/* Tablets */
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 }
 
-/* Móviles */
 @media (max-width: 600px) {
   .gallery {
     padding: 1.5rem 1rem;

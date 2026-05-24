@@ -24,9 +24,8 @@
   z-index: 100;
 }
 
-/* CONTENEDOR INTERNO CENTRADO */
 .header-content {
-  max-width: 1300px;      /* MISMO ANCHO QUE App.vue */
+  max-width: 1300px;      
   margin: 0 auto;
   padding: 1.4rem 3rem;
 
@@ -75,7 +74,6 @@
   width: 100%;
 }
 
-/* RESPONSIVE */
 @media (max-width: 700px) {
   .header-content {
     padding: 1rem 1.2rem;

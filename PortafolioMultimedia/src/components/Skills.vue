@@ -26,29 +26,26 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-/* CONTENEDOR PRINCIPAL */
+
 .skills {
   padding: 2rem;
-  max-width: 1300px;        /* ANCHO REAL PARA PC */
+  max-width: 1300px;        
   margin: 0 auto;
   color: #e6e6e6;
 }
 
-/* TÍTULO */
 .skills h2 {
   margin-bottom: 1.5rem;
   font-size: 2rem;
   font-weight: 700;
 }
 
-/* GRID DE HABILIDADES */
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* MÁS ELEGANTE */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
   gap: 1.5rem;
 }
 
-/* TARJETA */
 .skill-card {
   background: #1a1a1a;
   color: #f2f2f2;
@@ -62,27 +59,23 @@ onMounted(async () => {
   animation: fadeIn 0.6s ease forwards;
 }
 
-/* ANIMACIÓN DE ENTRADA */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* HOVER */
 .skill-card:hover {
   transform: translateY(-6px);
   background: #222;
   box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
-/* TEXTO */
 .skill-name {
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 600px) {
   .skills {
     padding: 1.5rem 1rem;
