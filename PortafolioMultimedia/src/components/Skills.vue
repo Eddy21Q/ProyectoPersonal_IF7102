@@ -1,12 +1,19 @@
 <template>
   <section id="skills" class="skills">
-    <h2>Habilidades</h2>
+    <div class="section-heading">
+      <h2>Habilidades</h2>
+      <p v-if="selectedSkill">
+        Nivel seleccionado: <strong>{{ selectedSkill.name }} - {{ selectedSkill.level }}%</strong>
+      </p>
+    </div>
 
     <div class="skills-list">
       <SkillCard
         v-for="skill in skills"
         :key="skill.name"
-        :skill="skill.name"
+        :skill="skill"
+        :active="selectedSkill?.name === skill.name"
+        @focus-skill="selectSkill"
       />
     </div>
   </section>
@@ -17,63 +24,59 @@ import { ref, onMounted } from 'vue'
 import SkillCard from './SkillCard.vue'
 
 const skills = ref([])
+const selectedSkill = ref(null)
+
+const selectSkill = (skill) => {
+  selectedSkill.value = skill
+}
 
 onMounted(async () => {
   const response = await fetch('/data/data.json')
   const data = await response.json()
   skills.value = data.skills
+  selectedSkill.value = data.skills[0] || null
 })
 </script>
 
 <style scoped>
-
 .skills {
   padding: 2rem;
-  max-width: 1300px;        
+  max-width: 1300px;
   margin: 0 auto;
   color: #e6e6e6;
 }
 
-.skills h2 {
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.section-heading h2 {
+  margin: 0;
   font-size: 2rem;
   font-weight: 700;
 }
 
+.section-heading p {
+  margin: 0;
+  color: #b9c7d4;
+  font-size: 0.95rem;
+}
+
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 1.5rem;
 }
 
-.skill-card {
-  background: #1a1a1a;
-  color: #f2f2f2;
-  padding: 1rem 1.4rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.5);
-  text-align: center;
-  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
-  cursor: default;
-  opacity: 0;
-  animation: fadeIn 0.6s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.skill-card:hover {
-  transform: translateY(-6px);
-  background: #222;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-}
-
-.skill-name {
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+@media (max-width: 700px) {
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 600px) {

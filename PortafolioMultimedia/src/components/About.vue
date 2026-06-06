@@ -3,10 +3,29 @@ import { ref, onMounted } from 'vue'
 
 const about = ref({})
 
+const resourceExists = async (url) => {
+  if (!url) return false
+
+  try {
+    const response = await fetch(url, { method: 'HEAD' })
+    return response.ok
+  } catch {
+    return false
+  }
+}
+
 onMounted(async () => {
   const response = await fetch('/data/data.json')
   const data = await response.json()
   about.value = data.about
+
+  if (!(await resourceExists(about.value.audio))) {
+    about.value.audio = ''
+  }
+
+  if (!(await resourceExists(about.value.video))) {
+    about.value.video = ''
+  }
 })
 </script>
 
@@ -19,11 +38,11 @@ onMounted(async () => {
         <h2>{{ about.name }}</h2>
         <p>{{ about.description }}</p>
 
-        <audio controls>
+        <audio v-if="about.audio" controls>
           <source :src="about.audio" type="audio/mpeg" />
         </audio>
 
-        <video controls class="video">
+        <video v-if="about.video" controls class="video">
           <source :src="about.video" type="video/mp4" />
         </video>
       </div>

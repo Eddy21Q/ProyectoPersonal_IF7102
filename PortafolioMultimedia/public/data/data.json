@@ -1,7 +1,7 @@
 {
   "about": {
-    "name": "Eddy Josué González Quirós",
-    "description": "Soy un informatico cuyos intereses se centran en el desarrollo web, la inteligencia artificial, Telecomunicaciones y la tecnología en general. Me apasiona aprender nuevas tecnologías y aplicarlas para resolver problemas del mundo real. Mi objetivo es seguir creciendo como desarrollador y como persona de tal manera que pueda contribuir a cumplir proyectos innovadores que tengan un impacto positivo en la sociedad.",
+    "name": "Eddy Josue Gonzalez Quiros",
+    "description": "Soy un informatico cuyos intereses se centran en el desarrollo web, la inteligencia artificial, telecomunicaciones y la tecnologia en general. Me apasiona aprender nuevas tecnologias y aplicarlas para resolver problemas del mundo real. Mi objetivo es seguir creciendo como desarrollador y como persona, de tal manera que pueda contribuir a proyectos innovadores que tengan un impacto positivo en la sociedad.",
     "photo": "/imagenes/Captura6_fotopersonal.png",
     "audio": "/audio/presentacion.mp3",
     "video": "/video/intro.mp4"
@@ -17,13 +17,13 @@
   "projects": [
     {
       "title": "Proyecto 1",
-      "image": "/images/p1.jpg",
-      "description": "Descripción del proyecto 1."
+      "image": "/imagenes/Captura1_CarpetasProyecto.png",
+      "description": "Evidencia de la estructura de carpetas del proyecto Vue."
     },
     {
       "title": "Proyecto 2",
-      "image": "/images/p2.jpg",
-      "description": "Descripción del proyecto 2."
+      "image": "/imagenes/Captura3_ComponentesPortafolio.png",
+      "description": "Evidencia de los componentes creados para el portafolio multimedia."
     }
   ]
 }
