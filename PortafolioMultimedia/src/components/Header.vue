@@ -1,11 +1,17 @@
 <template>
   <header class="header">
     <div class="header-content">
-      <h1 class="logo">Mi Portafolio</h1>
+      <div class="brand" aria-label="Identidad del portafolio">
+        <span class="brand-mark">EG</span>
+        <span class="brand-copy">
+          <strong>Eddy Gonzalez</strong>
+          <span>Portafolio multimedia</span>
+        </span>
+      </div>
 
-      <nav class="nav">
-        <a href="#about">Sobre mí</a>
-        <a href="#gallery">Galería</a>
+      <nav class="nav" aria-label="Navegacion principal">
+        <a href="#about">Sobre mi</a>
+        <a href="#gallery">Galeria</a>
         <a href="#skills">Habilidades</a>
       </nav>
     </div>
@@ -15,48 +21,81 @@
 <style scoped>
 .header {
   width: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(12px);
+  background: rgba(8, 8, 8, 0.86);
+  backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
 .header-content {
-  max-width: 1300px;      
-  margin: 0 auto;
-  padding: 1.4rem 3rem;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1rem 3rem;
 }
 
-.logo {
-  font-size: 1.7rem;
-  font-weight: 700;
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
   color: #ffffff;
+  min-width: 240px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(111, 180, 216, 0.6);
+  border-radius: 8px;
+  color: #8bbfda;
+  background: #111111;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.brand-copy {
+  display: grid;
+  gap: 0.1rem;
+  line-height: 1.2;
+}
+
+.brand-copy strong {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.brand-copy span {
+  color: #aeb8c2;
+  font-size: 0.82rem;
+  font-weight: 600;
 }
 
 .nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .nav a {
   color: #cccccc;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   padding-bottom: 4px;
   transition: color 0.25s ease;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a:focus-visible {
   color: #ffffff;
+  outline: none;
 }
 
 .nav a::after {
@@ -64,35 +103,28 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 0%;
+  width: 0;
   height: 2px;
-  background: #ffffff;
+  background: #8bbfda;
   transition: width 0.3s ease;
 }
 
-.nav a:hover::after {
+.nav a:hover::after,
+.nav a:focus-visible::after {
   width: 100%;
 }
 
 @media (max-width: 700px) {
   .header-content {
-    padding: 1rem 1.2rem;
+    align-items: flex-start;
     flex-direction: column;
-    gap: 0.8rem;
-  }
-
-  .logo {
-    font-size: 1.4rem;
-    text-align: center;
+    padding: 1rem 1.2rem;
   }
 
   .nav {
-    justify-content: center;
-    gap: 0.8rem 1.2rem;
-  }
-
-  .nav a {
-    font-size: 0.95rem;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.7rem;
   }
 }
 
@@ -101,9 +133,9 @@
     padding: 0.9rem 0.8rem;
   }
 
-  .nav {
-    width: 100%;
-    gap: 0.7rem;
+  .brand-mark {
+    width: 40px;
+    height: 40px;
   }
 
   .nav a {
