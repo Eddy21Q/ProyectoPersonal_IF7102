@@ -147,6 +147,6 @@ Nota: Vue Router fue consultado como parte del aprendizaje general sobre aplicac
 
 - OpenAI. (2026). *ChatGPT / Codex* [Asistente de inteligencia artificial]. https://openai.com/
 
-- Gonzalez Quiros, E. J. (2026). *Capturas de pantalla, fotografia personal, audio, video y archivo JSON del Proyecto Personal IF7102* [Recursos multimedia propios]. Licencia: recurso propio, uso autorizado para fines academicos.
+- González Quirós, E. J. (2026). *Capturas de pantalla, fotografia personal, audio, video y archivo JSON del Proyecto Personal IF7102* [Recursos multimedia propios]. Licencia: recurso propio, uso autorizado para fines academicos.
 
 ---

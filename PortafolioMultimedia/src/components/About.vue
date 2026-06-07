@@ -38,7 +38,7 @@ onMounted(async () => {
         <h2>{{ about.name }}</h2>
         <p>{{ about.description }}</p>
 
-        <div class="profile-tags" aria-label="Areas de interes">
+        <div class="profile-tags" aria-label="Áreas de interés">
           <span v-for="tag in profileTags" :key="tag">{{ tag }}</span>
         </div>
       </div>
@@ -47,7 +47,7 @@ onMounted(async () => {
         <img :src="about.photo" alt="Foto personal" />
         <figcaption>
           <span>Perfil</span>
-          <strong>Estudiante de informatica</strong>
+          <strong>Estudiante de informática</strong>
         </figcaption>
       </figure>
     </div>
@@ -65,8 +65,8 @@ onMounted(async () => {
           </div>
           <div class="media-copy">
             <span class="media-label">Audio</span>
-            <h3>Autopresentacion</h3>
-            <p>Grabacion personal para presentar mi perfil, intereses y objetivos.</p>
+            <h3>Autopresentación</h3>
+            <p>Grabación personal para presentar mi perfil, intereses y objetivos.</p>
           </div>
 
           <audio v-if="mediaStatus.audio" controls>
@@ -89,7 +89,7 @@ onMounted(async () => {
 
           <div class="media-copy">
             <span class="media-label">Video</span>
-            <h3>Introduccion personal</h3>
+            <h3>Introducción personal</h3>
             <p>Video corto para complementar la presentacion del portafolio.</p>
             <div v-if="!mediaStatus.video" class="media-pending">
               Pendiente de agregar `intro.mp4`
@@ -145,6 +145,8 @@ onMounted(async () => {
   color: #d6d6d6;
   font-size: 1.05rem;
   line-height: 1.7;
+  text-align: justify;
+  text-wrap: pretty;
 }
 
 .profile-tags {

@@ -4,14 +4,14 @@
       <div class="brand" aria-label="Identidad del portafolio">
         <span class="brand-mark">EG</span>
         <span class="brand-copy">
-          <strong>Eddy Gonzalez</strong>
+          <strong>Eddy González</strong>
           <span>Portafolio multimedia</span>
         </span>
       </div>
 
-      <nav class="nav" aria-label="Navegacion principal">
-        <a href="#about">Sobre mi</a>
-        <a href="#gallery">Galeria</a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#about">Sobre mí</a>
+        <a href="#gallery">Galería</a>
         <a href="#skills">Habilidades</a>
       </nav>
     </div>

@@ -99,6 +99,8 @@ const emit = defineEmits(['select'])
   margin: 0;
   color: #c7c7c7;
   line-height: 1.45;
+  text-align: justify;
+  text-wrap: pretty;
 }
 
 .project-role {

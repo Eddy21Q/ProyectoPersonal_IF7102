@@ -20,7 +20,7 @@ onMounted(async () => {
 <template>
   <section id="gallery" class="gallery">
     <div class="section-heading">
-      <h2>Galeria de Proyectos</h2>
+      <h2>Galería de Proyectos</h2>
       <p v-if="selectedProject">
         Proyecto seleccionado: <strong>{{ selectedProject.title }}</strong>
       </p>
@@ -104,6 +104,8 @@ onMounted(async () => {
   margin: 0;
   color: #cfcfcf;
   line-height: 1.5;
+  text-align: justify;
+  text-wrap: pretty;
 }
 
 .project-detail strong {

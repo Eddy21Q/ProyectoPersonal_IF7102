@@ -1,7 +1,7 @@
 {
   "about": {
-    "name": "Eddy Josue Gonzalez Quiros",
-    "description": "Soy un informatico cuyos intereses se centran en el desarrollo web, la inteligencia artificial, telecomunicaciones y la tecnologia en general. Me apasiona aprender nuevas tecnologias y aplicarlas para resolver problemas del mundo real. Mi objetivo es seguir creciendo como desarrollador y como persona, de tal manera que pueda contribuir a proyectos innovadores que tengan un impacto positivo en la sociedad.",
+    "name": "Eddy Josué González Quirós",
+    "description": "Soy un informático cuyos intereses se centran en el desarrollo web, la inteligencia artificial, las telecomunicaciones y la tecnología en general. Me apasiona aprender nuevas tecnologías y aplicarlas para resolver problemas del mundo real. Mi objetivo es seguir creciendo como desarrollador y como persona, de tal manera que pueda contribuir a proyectos innovadores que tengan un impacto positivo en la sociedad.",
     "photo": "/imagenes/Captura6_fotopersonal.png",
     "audio": "/audio/presentacion.mp3",
     "video": "/video/intro.mp4"
@@ -10,28 +10,28 @@
   "skills": [
     {
       "name": "Java",
-      "category": "Programacion",
-      "description": "Practica academica con metodos, arreglos, matrices, menus por consola y estructuras de control."
+      "category": "Programación",
+      "description": "Práctica académica con métodos, arreglos, matrices, menús por consola y estructuras de control."
     },
     {
       "name": "C#",
-      "category": "Programacion",
-      "description": "Interaccion con aplicaciones .NET y logica de backend en proyectos academicos."
+      "category": "Programación",
+      "description": "Interacción con aplicaciones .NET y lógica de backend en proyectos académicos."
     },
     {
       "name": "JavaScript",
       "category": "Frontend",
-      "description": "Creacion de interfaces interactivas, manejo de eventos, carga de datos JSON y uso de componentes."
+      "description": "Creación de interfaces interactivas, manejo de eventos, carga de datos JSON y uso de componentes."
     },
     {
       "name": "SQL",
       "category": "Bases de datos",
-      "description": "Consultas, gestion de datos e interaccion con sistemas conectados a bases de datos."
+      "description": "Consultas, gestión de datos e interacción con sistemas conectados a bases de datos."
     },
     {
       "name": "Bases de datos",
-      "category": "Desarrollo tecnico",
-      "description": "Interaccion con PostgreSQL y organizacion de informacion para sistemas web."
+      "category": "Desarrollo técnico",
+      "description": "Interacción con PostgreSQL y organización de información para sistemas web."
     },
     {
       "name": "Vue 3",
@@ -44,22 +44,22 @@
     {
       "title": "Sistema de Declaraciones UCR",
       "image": "/imagenes/proyecto-declaraciones-ucr.png",
-      "description": "Sistema web para la gestion de declaraciones juradas institucionales, desarrollado con Laravel y React/Inertia. Permite administrar usuarios, cargos, sedes, unidades academicas, horarios, documentos, notificaciones y exportaciones en PDF, incorporando autenticacion, roles y registro de actividad administrativa.",
-      "role": "Proyecto colaborativo en el que participe en su desarrollo.",
-      "technologies": ["Laravel", "React", "Inertia", "PDF", "Autenticacion"]
+      "description": "Sistema web para la gestión de declaraciones juradas institucionales, desarrollado con Laravel y React/Inertia. Permite administrar usuarios, cargos, sedes, unidades académicas, horarios, documentos, notificaciones y exportaciones en PDF, incorporando autenticación, roles y registro de actividad administrativa.",
+      "role": "Proyecto colaborativo en el que participé en su desarrollo.",
+      "technologies": ["Laravel", "React", "Inertia", "PDF", "Autenticación"]
     },
     {
       "title": "Aurora Boutique",
       "image": "/imagenes/proyecto-aurora-boutique.png",
-      "description": "Aplicacion web de e-commerce para una boutique, desarrollada con ASP.NET Core MVC y PostgreSQL. Incluye catalogo, carrito de compras, gestion de clientes, pedidos, pagos, facturacion PDF y administracion interna mediante una arquitectura por capas.",
-      "role": "Proyecto en el que participe en su desarrollo.",
+      "description": "Aplicación web de e-commerce para una boutique, desarrollada con ASP.NET Core MVC y PostgreSQL. Incluye catálogo, carrito de compras, gestión de clientes, pedidos, pagos, facturación PDF y administración interna mediante una arquitectura por capas.",
+      "role": "Proyecto en el que participé en su desarrollo.",
       "technologies": ["ASP.NET Core MVC", "PostgreSQL", "PDF", "E-commerce"]
     },
     {
       "title": "Ruta del Sabor",
       "image": "/imagenes/proyecto-ruta-del-sabor.png",
-      "description": "Aplicacion web interactiva de turismo gastronomico en Costa Rica, desarrollada con JavaScript moderno, Web Components y ES Modules. Permite explorar destinos mediante una interfaz modular, reutilizable y enfocada en contenido multimedia.",
-      "role": "Proyecto en el que participe en su desarrollo.",
+      "description": "Aplicación web interactiva de turismo gastronómico en Costa Rica, desarrollada con JavaScript moderno, Web Components y ES Modules. Permite explorar destinos mediante una interfaz modular, reutilizable y enfocada en contenido multimedia.",
+      "role": "Proyecto en el que participé en su desarrollo.",
       "technologies": ["JavaScript", "Web Components", "ES Modules", "Multimedia"]
     }
   ]

@@ -76,5 +76,7 @@ const emit = defineEmits(['focus-skill'])
 .skill-description {
   color: #c7c7c7;
   line-height: 1.45;
+  text-align: justify;
+  text-wrap: pretty;
 }
 </style>
