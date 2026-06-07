@@ -5,12 +5,9 @@
     type="button"
     @click="emit('focus-skill', skill)"
   >
-    <span class="skill-name">{{ skill.name }}</span>
-    <span class="skill-level">{{ skill.level }}%</span>
-
-    <span class="progress" aria-hidden="true">
-      <span class="progress-bar" :style="{ width: `${skill.level}%` }"></span>
-    </span>
+    <span class="skill-category">{{ skill.category }}</span>
+    <strong class="skill-name">{{ skill.name }}</strong>
+    <span class="skill-description">{{ skill.description }}</span>
   </button>
 </template>
 
@@ -31,12 +28,12 @@ const emit = defineEmits(['focus-skill'])
 
 <style scoped>
 .skill-card {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 0.8rem;
-  align-items: center;
+  display: flex;
+  min-height: 170px;
+  flex-direction: column;
+  gap: 0.65rem;
   background: #1a1a1a;
-  padding: 1rem 1.1rem;
+  padding: 1.15rem;
   border: 1px solid transparent;
   border-radius: 8px;
   color: #f2f2f2;
@@ -64,33 +61,20 @@ const emit = defineEmits(['focus-skill'])
   background: #20262b;
 }
 
-.skill-name {
-  font-size: 1.05rem;
-  font-weight: 700;
-}
-
-.skill-level {
+.skill-category {
   color: #8bbfda;
-  font-weight: 700;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
-.progress {
-  grid-column: 1 / -1;
-  height: 8px;
-  overflow: hidden;
-  background: #303030;
-  border-radius: 999px;
+.skill-name {
+  color: #ffffff;
+  font-size: 1.2rem;
 }
 
-.progress-bar {
-  display: block;
-  height: 100%;
-  background: linear-gradient(90deg, #6fb4d8, #9bd36a);
-  border-radius: inherit;
-  animation: fillBar 0.8s ease-out;
-}
-
-@keyframes fillBar {
-  from { width: 0; }
+.skill-description {
+  color: #c7c7c7;
+  line-height: 1.45;
 }
 </style>

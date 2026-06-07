@@ -9,6 +9,17 @@
     <span class="project-label">Proyecto</span>
     <h3>{{ project.title }}</h3>
     <p>{{ project.description }}</p>
+    <span v-if="project.role" class="project-role">{{ project.role }}</span>
+
+    <span v-if="project.technologies?.length" class="tech-list">
+      <span
+        v-for="technology in project.technologies"
+        :key="technology"
+        class="tech-tag"
+      >
+        {{ technology }}
+      </span>
+    </span>
   </button>
 </template>
 
@@ -88,5 +99,30 @@ const emit = defineEmits(['select'])
   margin: 0;
   color: #c7c7c7;
   line-height: 1.45;
+}
+
+.project-role {
+  display: block;
+  margin-top: 0.9rem;
+  color: #d8d8d8;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.9rem;
+}
+
+.tech-tag {
+  padding: 0.28rem 0.55rem;
+  border: 1px solid rgba(111, 180, 216, 0.45);
+  border-radius: 999px;
+  color: #d8effb;
+  background: rgba(111, 180, 216, 0.12);
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 </style>

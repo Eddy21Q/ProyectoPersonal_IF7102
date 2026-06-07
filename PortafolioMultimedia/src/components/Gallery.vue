@@ -39,6 +39,16 @@ onMounted(async () => {
     <aside v-if="selectedProject" class="project-detail">
       <h3>{{ selectedProject.title }}</h3>
       <p>{{ selectedProject.description }}</p>
+      <strong v-if="selectedProject.role">{{ selectedProject.role }}</strong>
+      <div v-if="selectedProject.technologies?.length" class="detail-tech-list">
+        <span
+          v-for="technology in selectedProject.technologies"
+          :key="technology"
+          class="detail-tech-tag"
+        >
+          {{ technology }}
+        </span>
+      </div>
     </aside>
   </section>
 </template>
@@ -94,6 +104,28 @@ onMounted(async () => {
   margin: 0;
   color: #cfcfcf;
   line-height: 1.5;
+}
+
+.project-detail strong {
+  display: block;
+  margin-top: 0.8rem;
+  color: #ffffff;
+}
+
+.detail-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.9rem;
+}
+
+.detail-tech-tag {
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  color: #d8effb;
+  background: rgba(111, 180, 216, 0.14);
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 @media (max-width: 900px) {

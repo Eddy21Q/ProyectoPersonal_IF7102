@@ -3,7 +3,7 @@
     <div class="section-heading">
       <h2>Habilidades</h2>
       <p v-if="selectedSkill">
-        Nivel seleccionado: <strong>{{ selectedSkill.name }} - {{ selectedSkill.level }}%</strong>
+        Tecnologia seleccionada: <strong>{{ selectedSkill.name }}</strong>
       </p>
     </div>
 
