@@ -32,14 +32,21 @@
 
 <style scoped>
 .profile-summary {
-  margin: 1rem auto 2.5rem;
+  margin: 1rem 2rem 2.5rem;
   padding: 1.6rem 1.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-left: 3px solid #8bbfda;
-  border-radius: 8px;
-  background: #151515;
+  border: 1px solid rgba(49, 213, 255, 0.16);
+  border-left: 3px solid #31d5ff;
+  border-radius: 10px;
+  background: rgba(10, 18, 26, 0.88);
   color: #e6e6e6;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 600px) {
+  .profile-summary {
+    margin: 1rem 1rem 2rem;
+    padding: 1.25rem;
+  }
 }
 
 .summary-heading {
@@ -49,7 +56,7 @@
 }
 
 .summary-heading span {
-  color: #8bbfda;
+  color: #31d5ff;
   font-size: 0.78rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -80,10 +87,10 @@
 
 .summary-points span {
   padding: 0.42rem 0.7rem;
-  border: 1px solid rgba(111, 180, 216, 0.38);
+  border: 1px solid rgba(49, 213, 255, 0.34);
   border-radius: 999px;
   color: #d8effb;
-  background: rgba(111, 180, 216, 0.1);
+  background: rgba(49, 213, 255, 0.08);
   font-size: 0.86rem;
   font-weight: 700;
 }

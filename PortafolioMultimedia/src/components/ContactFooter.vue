@@ -33,8 +33,8 @@
 <style scoped>
 .contact-footer {
   margin-top: 2.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  background: #090909;
+  border-top: 1px solid rgba(49, 213, 255, 0.16);
+  background: rgba(4, 8, 13, 0.98);
   color: #e6e6e6;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .contact-copy span {
-  color: #8bbfda;
+  color: #31d5ff;
   font-size: 0.78rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -79,10 +79,10 @@
 .contact-links a {
   min-width: 104px;
   padding: 0.68rem 0.9rem;
-  border: 1px solid rgba(111, 180, 216, 0.38);
+  border: 1px solid rgba(49, 213, 255, 0.34);
   border-radius: 8px;
   color: #d8effb;
-  background: rgba(111, 180, 216, 0.08);
+  background: rgba(49, 213, 255, 0.08);
   font-weight: 800;
   text-align: center;
   text-decoration: none;
@@ -94,8 +94,8 @@
 .contact-links a:hover,
 .contact-links a:focus-visible {
   transform: translateY(-2px);
-  border-color: #8bbfda;
-  background: rgba(111, 180, 216, 0.16);
+  border-color: #31d5ff;
+  background: rgba(49, 213, 255, 0.16);
   outline: none;
 }
 

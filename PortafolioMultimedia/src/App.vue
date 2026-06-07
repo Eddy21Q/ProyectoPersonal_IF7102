@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  background: #0d0d0d;
+  background: #050a10;
 }
 
 ::selection {
@@ -41,8 +41,9 @@ body {
 
 .app {
   background:
-    linear-gradient(180deg, rgba(139, 191, 218, 0.04), transparent 420px),
-    #0d0d0d;
+    radial-gradient(circle at 22% 8%, rgba(49, 213, 255, 0.08), transparent 26%),
+    radial-gradient(circle at 78% 20%, rgba(49, 213, 255, 0.08), transparent 30%),
+    linear-gradient(180deg, #050a10 0%, #081019 44%, #050a10 100%);
   min-height: 100vh;
   color: #e6e6e6;
   font-family: 'Inter', sans-serif;
@@ -51,7 +52,7 @@ body {
 .content {
   max-width: 1300px;   
   margin: 0 auto;
-  padding: 3.25rem 3rem 4rem;
+  padding: 1.4rem 3rem 4rem;
 }
 
 .content > section + section {

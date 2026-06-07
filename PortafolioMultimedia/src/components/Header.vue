@@ -5,17 +5,22 @@
         <span class="brand-mark">EG</span>
         <span class="brand-copy">
           <strong>Eddy González</strong>
-          <span>Portafolio multimedia</span>
+          <span>Portafolio personal</span>
         </span>
       </div>
 
       <nav class="nav" aria-label="Navegación principal">
-        <a href="#about">Sobre mí</a>
+        <a class="active" href="#about">Sobre mí</a>
         <a href="#gallery">Galería</a>
         <a href="#skills">Habilidades</a>
         <a href="#learning">Aprendiendo</a>
         <a href="#contact">Contacto</a>
       </nav>
+
+      <div class="header-actions" aria-hidden="true">
+        <span class="theme-dot"></span>
+        <span class="menu-lines"></span>
+      </div>
     </div>
   </header>
 </template>
@@ -23,9 +28,9 @@
 <style scoped>
 .header {
   width: 100%;
-  background: rgba(8, 8, 8, 0.86);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(5, 10, 16, 0.88);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(58, 204, 255, 0.18);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03);
   position: sticky;
   top: 0;
@@ -33,21 +38,21 @@
 }
 
 .header-content {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 2rem;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0.85rem 3rem;
+  padding: 0.8rem 3rem;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.75rem;
   color: #ffffff;
-  min-width: 240px;
+  min-width: 230px;
 }
 
 .brand-mark {
@@ -55,51 +60,54 @@
   place-items: center;
   width: 44px;
   height: 44px;
-  border: 1px solid rgba(111, 180, 216, 0.6);
-  border-radius: 8px;
-  color: #8bbfda;
-  background: #111111;
-  font-size: 0.9rem;
+  border: 1px solid rgba(48, 203, 255, 0.72);
+  border-radius: 9px;
+  color: #31d5ff;
+  background: linear-gradient(145deg, #07131c, #0e1d28);
+  font-size: 0.95rem;
   font-weight: 900;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 22px rgba(48, 203, 255, 0.12);
 }
 
 .brand-copy {
   display: grid;
   gap: 0.1rem;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .brand-copy strong {
-  font-size: 1.05rem;
-  font-weight: 800;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 850;
 }
 
 .brand-copy span {
-  color: #aeb8c2;
-  font-size: 0.82rem;
-  font-weight: 600;
+  color: #95a8b8;
+  font-size: 0.8rem;
+  font-weight: 650;
 }
 
 .nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 1.65rem;
 }
 
 .nav a {
-  color: #cccccc;
+  color: #c5d1da;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: 750;
+  font-size: 0.86rem;
   position: relative;
-  padding-bottom: 4px;
+  padding: 0.45rem 0;
   transition: color 0.25s ease;
 }
 
 .nav a:hover,
-.nav a:focus-visible {
-  color: #ffffff;
+.nav a:focus-visible,
+.nav a.active {
+  color: #31d5ff;
   outline: none;
 }
 
@@ -107,44 +115,87 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
-  width: 0;
+  right: 0;
+  bottom: -0.82rem;
   height: 2px;
-  background: #8bbfda;
-  transition: width 0.3s ease;
+  background: #31d5ff;
+  box-shadow: 0 0 12px rgba(49, 213, 255, 0.65);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
 }
 
 .nav a:hover::after,
-.nav a:focus-visible::after {
-  width: 100%;
+.nav a:focus-visible::after,
+.nav a.active::after {
+  transform: scaleX(1);
 }
 
-@media (max-width: 700px) {
+.header-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  min-width: 74px;
+}
+
+.theme-dot {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #9fb2c0;
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+.menu-lines,
+.menu-lines::before,
+.menu-lines::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: #9fb2c0;
+  content: "";
+}
+
+.menu-lines {
+  position: relative;
+}
+
+.menu-lines::before {
+  position: absolute;
+  top: -6px;
+}
+
+.menu-lines::after {
+  position: absolute;
+  top: 6px;
+}
+
+@media (max-width: 900px) {
   .header-content {
-    align-items: flex-start;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
     padding: 1rem 1.2rem;
   }
 
   .nav {
-    width: 100%;
-    justify-content: space-between;
-    gap: 0.7rem;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .header-actions {
+    display: none;
   }
 }
 
-@media (max-width: 420px) {
-  .header-content {
-    padding: 0.9rem 0.8rem;
-  }
-
-  .brand-mark {
-    width: 40px;
-    height: 40px;
+@media (max-width: 520px) {
+  .nav {
+    gap: 0.85rem;
   }
 
   .nav a {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
   }
 }
 </style>

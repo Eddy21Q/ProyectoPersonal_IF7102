@@ -35,9 +35,9 @@ const emit = defineEmits(['focus-skill'])
   min-height: 178px;
   flex-direction: column;
   gap: 0.7rem;
-  background: #1a1a1a;
+  background: rgba(10, 18, 26, 0.9);
   padding: 1.05rem;
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(49, 213, 255, 0.14);
   border-radius: 8px;
   color: #f2f2f2;
   text-align: left;
@@ -53,15 +53,15 @@ const emit = defineEmits(['focus-skill'])
 .skill-card:hover,
 .skill-card:focus-visible {
   transform: translateY(-6px);
-  background: #222;
-  border-color: #6fb4d8;
+  background: rgba(14, 28, 40, 0.96);
+  border-color: #31d5ff;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.36);
   outline: none;
 }
 
 .skill-card.active {
-  border-color: #6fb4d8;
-  background: #20262b;
+  border-color: #31d5ff;
+  background: rgba(14, 28, 40, 0.96);
 }
 
 .skill-topline {
@@ -75,16 +75,16 @@ const emit = defineEmits(['focus-skill'])
   place-items: center;
   width: 34px;
   height: 34px;
-  border: 1px solid rgba(111, 180, 216, 0.4);
+  border: 1px solid rgba(49, 213, 255, 0.34);
   border-radius: 8px;
   color: #d8effb;
-  background: rgba(111, 180, 216, 0.1);
+  background: rgba(49, 213, 255, 0.09);
   font-size: 0.9rem;
   font-weight: 900;
 }
 
 .skill-category {
-  color: #8bbfda;
+  color: #31d5ff;
   font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;

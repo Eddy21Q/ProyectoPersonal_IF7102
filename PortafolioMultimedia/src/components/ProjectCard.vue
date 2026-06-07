@@ -44,10 +44,10 @@ const emit = defineEmits(['select'])
   flex-direction: column;
   width: 100%;
   min-height: 100%;
-  background: #1a1a1a;
+  background: rgba(10, 18, 26, 0.9);
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 8px;
+  border: 1px solid rgba(49, 213, 255, 0.14);
+  border-radius: 10px;
   text-align: left;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
   transition: transform 0.25s ease,
@@ -62,16 +62,16 @@ const emit = defineEmits(['select'])
 .project-card:hover,
 .project-card:focus-visible {
   transform: translateY(-6px);
-  background: #222;
-  border-color: #6fb4d8;
+  background: rgba(14, 28, 40, 0.96);
+  border-color: #31d5ff;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.36);
   outline: none;
 }
 
 .project-card.active {
-  border-color: #6fb4d8;
-  background: #20262b;
-  box-shadow: 0 0 0 1px rgba(111, 180, 216, 0.14),
+  border-color: #31d5ff;
+  background: rgba(14, 28, 40, 0.96);
+  box-shadow: 0 0 0 1px rgba(49, 213, 255, 0.18),
               0 14px 28px rgba(0, 0, 0, 0.34);
 }
 
@@ -86,7 +86,7 @@ const emit = defineEmits(['select'])
 .project-label {
   display: block;
   margin-bottom: 0.35rem;
-  color: #8bbfda;
+  color: #31d5ff;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -126,10 +126,10 @@ const emit = defineEmits(['select'])
 
 .tech-tag {
   padding: 0.28rem 0.55rem;
-  border: 1px solid rgba(111, 180, 216, 0.45);
+  border: 1px solid rgba(49, 213, 255, 0.32);
   border-radius: 999px;
-  color: #d8effb;
-  background: rgba(111, 180, 216, 0.12);
+  color: #d8f6ff;
+  background: rgba(49, 213, 255, 0.1);
   font-size: 0.78rem;
   font-weight: 700;
 }

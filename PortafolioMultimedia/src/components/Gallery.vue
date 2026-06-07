@@ -74,11 +74,12 @@ onMounted(async () => {
   font-size: 2rem;
   font-weight: 800;
   line-height: 1.15;
+  color: #ffffff;
 }
 
 .section-heading p {
   margin: 0;
-  color: #b9c7d4;
+  color: #9fb5c4;
   font-size: 0.95rem;
 }
 
@@ -91,9 +92,10 @@ onMounted(async () => {
 .project-detail {
   margin-top: 1.5rem;
   padding: 1.35rem 1.5rem;
-  border-left: 3px solid #6fb4d8;
-  background: #141414;
-  border-radius: 8px;
+  border: 1px solid rgba(49, 213, 255, 0.16);
+  border-left: 3px solid #31d5ff;
+  background: rgba(10, 18, 26, 0.88);
+  border-radius: 10px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
 
@@ -126,8 +128,8 @@ onMounted(async () => {
 .detail-tech-tag {
   padding: 0.28rem 0.55rem;
   border-radius: 999px;
-  color: #d8effb;
-  background: rgba(111, 180, 216, 0.14);
+  color: #d8f6ff;
+  background: rgba(49, 213, 255, 0.12);
   font-size: 0.78rem;
   font-weight: 700;
 }

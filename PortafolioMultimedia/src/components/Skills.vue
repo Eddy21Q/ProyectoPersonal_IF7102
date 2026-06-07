@@ -59,11 +59,12 @@ onMounted(async () => {
   font-size: 2rem;
   font-weight: 800;
   line-height: 1.15;
+  color: #ffffff;
 }
 
 .section-heading p {
   margin: 0;
-  color: #b9c7d4;
+  color: #9fb5c4;
   font-size: 0.95rem;
 }
 

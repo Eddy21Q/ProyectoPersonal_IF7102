@@ -55,7 +55,7 @@ const learningItems = [
 }
 
 .section-heading span {
-  color: #8bbfda;
+  color: #31d5ff;
   font-size: 0.78rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -77,14 +77,14 @@ const learningItems = [
 .learning-item {
   min-height: 180px;
   padding: 1.15rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  background: #171717;
+  border: 1px solid rgba(49, 213, 255, 0.14);
+  border-radius: 10px;
+  background: rgba(10, 18, 26, 0.9);
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
 }
 
 .learning-item span {
-  color: #8bbfda;
+  color: #31d5ff;
   font-size: 0.78rem;
   font-weight: 900;
   text-transform: uppercase;
