@@ -55,7 +55,7 @@ onMounted(async () => {
 
 <style scoped>
 .gallery {
-  padding: 2rem;
+  padding: 2.4rem 2rem 2rem;
   max-width: 1300px;
   margin: 0 auto;
   color: #e6e6e6;
@@ -72,7 +72,8 @@ onMounted(async () => {
 .section-heading h2 {
   margin: 0;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
+  line-height: 1.15;
 }
 
 .section-heading p {
@@ -84,15 +85,16 @@ onMounted(async () => {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  gap: 1.35rem;
 }
 
 .project-detail {
   margin-top: 1.5rem;
-  padding: 1.2rem 1.4rem;
-  border-left: 4px solid #6fb4d8;
+  padding: 1.35rem 1.5rem;
+  border-left: 3px solid #6fb4d8;
   background: #141414;
   border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
 
 .project-detail h3 {

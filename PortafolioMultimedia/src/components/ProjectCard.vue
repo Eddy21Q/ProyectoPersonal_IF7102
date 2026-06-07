@@ -40,14 +40,16 @@ const emit = defineEmits(['select'])
 
 <style scoped>
 .project-card {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   min-height: 100%;
   background: #1a1a1a;
-  padding: 1.2rem;
-  border: 1px solid transparent;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 8px;
   text-align: left;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
   transition: transform 0.25s ease,
               box-shadow 0.25s ease,
               background 0.25s ease,
@@ -62,20 +64,22 @@ const emit = defineEmits(['select'])
   transform: translateY(-6px);
   background: #222;
   border-color: #6fb4d8;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.36);
   outline: none;
 }
 
 .project-card.active {
   border-color: #6fb4d8;
   background: #20262b;
+  box-shadow: 0 0 0 1px rgba(111, 180, 216, 0.14),
+              0 14px 28px rgba(0, 0, 0, 0.34);
 }
 
 .project-card img {
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: 6px;
-  margin-bottom: 0.9rem;
+  border-radius: 7px;
+  margin-bottom: 1rem;
   object-fit: cover;
 }
 
@@ -98,7 +102,7 @@ const emit = defineEmits(['select'])
 .project-card p {
   margin: 0;
   color: #c7c7c7;
-  line-height: 1.45;
+  line-height: 1.5;
   text-align: justify;
   text-wrap: pretty;
 }
@@ -115,7 +119,9 @@ const emit = defineEmits(['select'])
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
+  align-items: flex-end;
   margin-top: 0.9rem;
+  padding-top: 0.1rem;
 }
 
 .tech-tag {

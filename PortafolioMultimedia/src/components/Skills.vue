@@ -40,7 +40,7 @@ onMounted(async () => {
 
 <style scoped>
 .skills {
-  padding: 2rem;
+  padding: 2.4rem 2rem 2rem;
   max-width: 1300px;
   margin: 0 auto;
   color: #e6e6e6;
@@ -57,7 +57,8 @@ onMounted(async () => {
 .section-heading h2 {
   margin: 0;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
+  line-height: 1.15;
 }
 
 .section-heading p {
@@ -68,8 +69,8 @@ onMounted(async () => {
 
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.1rem;
 }
 
 @media (max-width: 700px) {

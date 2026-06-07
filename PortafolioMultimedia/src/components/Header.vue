@@ -13,6 +13,8 @@
         <a href="#about">Sobre mí</a>
         <a href="#gallery">Galería</a>
         <a href="#skills">Habilidades</a>
+        <a href="#learning">Aprendiendo</a>
+        <a href="#contact">Contacto</a>
       </nav>
     </div>
   </header>
@@ -24,6 +26,7 @@
   background: rgba(8, 8, 8, 0.86);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -36,7 +39,7 @@
   gap: 2rem;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 1rem 3rem;
+  padding: 0.85rem 3rem;
 }
 
 .brand {
@@ -58,6 +61,7 @@
   background: #111111;
   font-size: 0.9rem;
   font-weight: 900;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 .brand-copy {
@@ -87,6 +91,7 @@
   color: #cccccc;
   text-decoration: none;
   font-weight: 600;
+  font-size: 0.95rem;
   position: relative;
   padding-bottom: 4px;
   transition: color 0.25s ease;

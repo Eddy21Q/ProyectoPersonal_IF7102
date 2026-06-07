@@ -5,7 +5,10 @@
     type="button"
     @click="emit('focus-skill', skill)"
   >
-    <span class="skill-category">{{ skill.category }}</span>
+    <span class="skill-topline">
+      <span class="skill-mark">{{ skill.name.charAt(0) }}</span>
+      <span class="skill-category">{{ skill.category }}</span>
+    </span>
     <strong class="skill-name">{{ skill.name }}</strong>
     <span class="skill-description">{{ skill.description }}</span>
   </button>
@@ -29,17 +32,17 @@ const emit = defineEmits(['focus-skill'])
 <style scoped>
 .skill-card {
   display: flex;
-  min-height: 170px;
+  min-height: 178px;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.7rem;
   background: #1a1a1a;
-  padding: 1.15rem;
-  border: 1px solid transparent;
+  padding: 1.05rem;
+  border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 8px;
   color: #f2f2f2;
   text-align: left;
   font: inherit;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
   transition: transform 0.25s ease,
               background 0.25s ease,
               box-shadow 0.25s ease,
@@ -52,13 +55,32 @@ const emit = defineEmits(['focus-skill'])
   transform: translateY(-6px);
   background: #222;
   border-color: #6fb4d8;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.36);
   outline: none;
 }
 
 .skill-card.active {
   border-color: #6fb4d8;
   background: #20262b;
+}
+
+.skill-topline {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.skill-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(111, 180, 216, 0.4);
+  border-radius: 8px;
+  color: #d8effb;
+  background: rgba(111, 180, 216, 0.1);
+  font-size: 0.9rem;
+  font-weight: 900;
 }
 
 .skill-category {
@@ -71,11 +93,12 @@ const emit = defineEmits(['focus-skill'])
 .skill-name {
   color: #ffffff;
   font-size: 1.2rem;
+  line-height: 1.2;
 }
 
 .skill-description {
   color: #c7c7c7;
-  line-height: 1.45;
+  line-height: 1.5;
   text-align: justify;
   text-wrap: pretty;
 }
