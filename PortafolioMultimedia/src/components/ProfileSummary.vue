@@ -44,8 +44,12 @@
 
 @media (max-width: 600px) {
   .profile-summary {
-    margin: 1rem 1rem 2rem;
+    margin: 1rem 0.35rem 2rem;
     padding: 1.25rem;
+  }
+
+  .profile-summary p {
+    text-align: left;
   }
 }
 

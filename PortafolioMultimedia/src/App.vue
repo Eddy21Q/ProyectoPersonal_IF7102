@@ -76,7 +76,7 @@ body {
 @media (max-width: 600px) {
   .content {
     max-width: 100%;
-    padding: 1.5rem 1rem;
+    padding: 1rem 0.75rem 2.5rem;
   }
 }
 

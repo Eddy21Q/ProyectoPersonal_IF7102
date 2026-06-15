@@ -21,25 +21,26 @@ Aplicacion web multimedia desarrollada con **Vue 3** y **Vite** para el curso IF
 El proyecto incluye:
 
 - Presentacion personal con fotografia propia.
-- Audio de autopresentacion grabado por el estudiante.
-- Video introductorio personal.
+- Espacios para audio de autopresentacion y video introductorio personal.
 - Galeria de proyectos o evidencias del proceso.
-- Seccion de habilidades con animaciones.
+- Seccion de habilidades con tarjetas interactivas y animaciones visuales.
 - Datos cargados dinamicamente desde `public/data/data.json`.
 
 ---
 
 ## Funcionalidades Implementadas
 
-- Componentes por seccion: `Header`, `About`, `Gallery` y `Skills`.
+- Componentes por seccion: `Header`, `About`, `ProfileSummary`, `Gallery`, `Skills`, `Learning` y `ContactFooter`.
 - Componentes reutilizables: `ProjectCard` y `SkillCard`.
 - Uso de `props` para enviar datos desde componentes padres hacia componentes hijos.
 - Uso de `defineEmits` para emitir eventos desde tarjetas hacia sus componentes padres.
 - Uso de `v-for` para renderizar listas de proyectos y habilidades.
 - Uso de `ref` y `onMounted` para manejar reactividad y ciclo de vida.
 - Carga de datos desde JSON mediante `fetch`.
+- Modulo compartido para centralizar la carga de datos del portafolio.
+- Navegacion principal con estado activo segun la seccion visible.
 - Seleccion visual de proyectos y habilidades.
-- Barras animadas para representar niveles de habilidad.
+- Animaciones en las tarjetas de habilidades para reforzar la interactividad.
 - Diseno responsive para pantallas de escritorio y moviles.
 
 ---
@@ -67,11 +68,16 @@ PortafolioMultimedia/
 │   │   └── base.css
 │   ├── components/
 │   │   ├── About.vue
+│   │   ├── ContactFooter.vue
 │   │   ├── Gallery.vue
 │   │   ├── Header.vue
+│   │   ├── Learning.vue
+│   │   ├── ProfileSummary.vue
 │   │   ├── ProjectCard.vue
 │   │   ├── SkillCard.vue
 │   │   └── Skills.vue
+│   ├── services/
+│   │   └── portfolioData.js
 │   ├── App.vue
 │   └── main.js
 ├── package.json
@@ -138,11 +144,15 @@ npm run build
 
 ### `Header.vue`
 
-Muestra la navegacion principal hacia las secciones Sobre mi, Galeria y Habilidades.
+Muestra la navegacion principal hacia las secciones del portafolio y resalta la seccion activa.
 
 ### `About.vue`
 
 Carga desde JSON la informacion personal, fotografia, audio y video. Utiliza `fetch`, `ref` y `onMounted`.
+
+### `ProfileSummary.vue`
+
+Presenta un resumen profesional con las areas de interes y enfoque academico.
 
 ### `Gallery.vue`
 
@@ -158,7 +168,19 @@ Carga habilidades desde JSON, renderiza la lista con `v-for` y muestra la habili
 
 ### `SkillCard.vue`
 
-Recibe una habilidad mediante `props`, muestra su nivel porcentual y emite el evento `focus-skill` al seleccionarla.
+Recibe una habilidad mediante `props`, muestra su categoria y descripcion, aplica animaciones visuales, y emite el evento `focus-skill` al seleccionarla.
+
+### `Learning.vue`
+
+Muestra las areas que se estan fortaleciendo durante el proceso de aprendizaje.
+
+### `ContactFooter.vue`
+
+Presenta los canales de contacto academico y profesional.
+
+### `services/portfolioData.js`
+
+Centraliza la carga del archivo `public/data/data.json` para reutilizar los datos entre componentes.
 
 ---
 

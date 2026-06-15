@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import ProjectCard from './ProjectCard.vue'
+import { getPortfolioData } from '@/services/portfolioData'
 
 const projects = ref([])
 const selectedProject = ref(null)
@@ -10,8 +11,7 @@ const selectProject = (project) => {
 }
 
 onMounted(async () => {
-  const response = await fetch('/data/data.json')
-  const data = await response.json()
+  const data = await getPortfolioData()
   projects.value = data.projects
   selectedProject.value = data.projects[0] || null
 })
@@ -147,11 +147,19 @@ onMounted(async () => {
 
 @media (max-width: 600px) {
   .gallery {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.35rem;
   }
 
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-detail {
+    padding: 1.15rem;
+  }
+
+  .project-detail p {
+    text-align: left;
   }
 }
 </style>

@@ -10,11 +10,16 @@
       </div>
 
       <nav class="nav" aria-label="Navegación principal">
-        <a class="active" href="#about">Sobre mí</a>
-        <a href="#gallery">Galería</a>
-        <a href="#skills">Habilidades</a>
-        <a href="#learning">Aprendiendo</a>
-        <a href="#contact">Contacto</a>
+        <a
+          v-for="item in navItems"
+          :key="item.id"
+          :class="{ active: activeSection === item.id }"
+          :aria-current="activeSection === item.id ? 'page' : undefined"
+          :href="`#${item.id}`"
+          @click="setActiveSection(item.id)"
+        >
+          {{ item.label }}
+        </a>
       </nav>
 
       <div class="header-actions" aria-hidden="true">
@@ -24,6 +29,51 @@
     </div>
   </header>
 </template>
+
+<script setup>
+import { onBeforeUnmount, onMounted, ref } from 'vue'
+
+const navItems = [
+  { id: 'about', label: 'Sobre mí' },
+  { id: 'gallery', label: 'Galería' },
+  { id: 'skills', label: 'Habilidades' },
+  { id: 'learning', label: 'Aprendiendo' },
+  { id: 'contact', label: 'Contacto' }
+]
+
+const activeSection = ref('about')
+
+const setActiveSection = (sectionId) => {
+  activeSection.value = sectionId
+}
+
+const updateActiveSection = () => {
+  const currentHash = window.location.hash.replace('#', '')
+
+  if (navItems.some((item) => item.id === currentHash)) {
+    activeSection.value = currentHash
+    return
+  }
+
+  const sectionInView = navItems.findLast((item) => {
+    const section = document.getElementById(item.id)
+    return section && section.getBoundingClientRect().top <= 120
+  })
+
+  activeSection.value = sectionInView?.id || 'about'
+}
+
+onMounted(() => {
+  updateActiveSection()
+  window.addEventListener('hashchange', updateActiveSection)
+  window.addEventListener('scroll', updateActiveSection, { passive: true })
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('hashchange', updateActiveSection)
+  window.removeEventListener('scroll', updateActiveSection)
+})
+</script>
 
 <style scoped>
 .header {
@@ -180,8 +230,20 @@
   }
 
   .nav {
+    flex-wrap: nowrap;
     justify-content: flex-start;
     gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav a {
+    flex: 0 0 auto;
   }
 
   .header-actions {
@@ -190,12 +252,42 @@
 }
 
 @media (max-width: 520px) {
+  .header-content {
+    gap: 0.75rem;
+    padding: 0.85rem 0.95rem;
+  }
+
+  .brand {
+    min-width: 0;
+    gap: 0.65rem;
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+  }
+
+  .brand-copy strong {
+    font-size: 0.92rem;
+  }
+
+  .brand-copy span {
+    font-size: 0.74rem;
+  }
+
   .nav {
-    gap: 0.85rem;
+    gap: 0.95rem;
   }
 
   .nav a {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
+    padding: 0.35rem 0;
+  }
+
+  .nav a::after {
+    bottom: -0.35rem;
   }
 }
 </style>

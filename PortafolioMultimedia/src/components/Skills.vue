@@ -9,9 +9,10 @@
 
     <div class="skills-list">
       <SkillCard
-        v-for="skill in skills"
+        v-for="(skill, index) in skills"
         :key="skill.name"
         :skill="skill"
+        :index="index"
         :active="selectedSkill?.name === skill.name"
         @focus-skill="selectSkill"
       />
@@ -22,6 +23,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import SkillCard from './SkillCard.vue'
+import { getPortfolioData } from '@/services/portfolioData'
 
 const skills = ref([])
 const selectedSkill = ref(null)
@@ -31,8 +33,7 @@ const selectSkill = (skill) => {
 }
 
 onMounted(async () => {
-  const response = await fetch('/data/data.json')
-  const data = await response.json()
+  const data = await getPortfolioData()
   skills.value = data.skills
   selectedSkill.value = data.skills[0] || null
 })

@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { getPortfolioData } from '@/services/portfolioData'
 
 const about = ref({})
 const mediaStatus = ref({
@@ -21,8 +22,7 @@ const resourceExists = async (url) => {
 }
 
 onMounted(async () => {
-  const response = await fetch('/data/data.json')
-  const data = await response.json()
+  const data = await getPortfolioData()
   about.value = data.about
 
   mediaStatus.value.audio = await resourceExists(about.value.audio)
@@ -88,9 +88,7 @@ onMounted(async () => {
             <p>Grabación personal para presentar mi perfil, intereses y objetivos.</p>
           </div>
 
-          <audio v-if="mediaStatus.audio" controls>
-            <source :src="about.audio" type="audio/mpeg" />
-          </audio>
+          <audio v-if="mediaStatus.audio" :src="about.audio" controls preload="metadata"></audio>
           <div v-else class="media-pending">
             Pendiente de agregar `presentacion.mp3`
           </div>
@@ -568,24 +566,36 @@ onMounted(async () => {
 
 @media (max-width: 600px) {
   .about {
-    padding: 1.4rem 1rem;
+    padding: 1.25rem 0.9rem;
+    border-radius: 12px;
   }
 
   .profile-hero {
     gap: 1.4rem;
-    padding-top: 0.8rem;
+    padding-top: 0.45rem;
   }
 
   .hero-copy h1 {
-    font-size: 2.45rem;
+    font-size: clamp(2.25rem, 12vw, 3.15rem);
+    line-height: 0.98;
   }
 
   .hero-copy p {
     font-size: 0.98rem;
+    line-height: 1.62;
+    text-align: left;
   }
 
   .portrait-panel {
     min-height: 360px;
+  }
+
+  .profile-tags span {
+    font-size: 0.78rem;
+  }
+
+  .hero-actions a {
+    flex: 1 1 150px;
   }
 }
 </style>

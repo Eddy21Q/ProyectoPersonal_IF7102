@@ -133,4 +133,10 @@ const emit = defineEmits(['select'])
   font-size: 0.78rem;
   font-weight: 700;
 }
+
+@media (max-width: 600px) {
+  .project-card p {
+    text-align: left;
+  }
+}
 </style>

@@ -106,7 +106,11 @@ const learningItems = [
 
 @media (max-width: 600px) {
   .learning {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.35rem;
+  }
+
+  .learning-item p {
+    text-align: left;
   }
 }
 </style>
