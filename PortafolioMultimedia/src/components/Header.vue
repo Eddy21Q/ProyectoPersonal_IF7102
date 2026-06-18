@@ -21,11 +21,6 @@
           {{ item.label }}
         </a>
       </nav>
-
-      <div class="header-actions" aria-hidden="true">
-        <span class="theme-dot"></span>
-        <span class="menu-lines"></span>
-      </div>
     </div>
   </header>
 </template>
@@ -89,7 +84,7 @@ onBeforeUnmount(() => {
 
 .header-content {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 2rem;
   max-width: 1300px;
@@ -181,47 +176,6 @@ onBeforeUnmount(() => {
   transform: scaleX(1);
 }
 
-.header-actions {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1rem;
-  min-width: 74px;
-}
-
-.theme-dot {
-  width: 18px;
-  height: 18px;
-  border: 2px solid #9fb2c0;
-  border-left-color: transparent;
-  border-radius: 50%;
-}
-
-.menu-lines,
-.menu-lines::before,
-.menu-lines::after {
-  display: block;
-  width: 18px;
-  height: 2px;
-  border-radius: 999px;
-  background: #9fb2c0;
-  content: "";
-}
-
-.menu-lines {
-  position: relative;
-}
-
-.menu-lines::before {
-  position: absolute;
-  top: -6px;
-}
-
-.menu-lines::after {
-  position: absolute;
-  top: 6px;
-}
-
 @media (max-width: 900px) {
   .header-content {
     grid-template-columns: 1fr;
@@ -244,10 +198,6 @@ onBeforeUnmount(() => {
 
   .nav a {
     flex: 0 0 auto;
-  }
-
-  .header-actions {
-    display: none;
   }
 }
 

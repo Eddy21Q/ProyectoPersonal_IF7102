@@ -100,7 +100,7 @@ onMounted(async () => {
             <h3>Introducción personal</h3>
             <p>Video corto para complementar la presentación del portafolio.</p>
             <div v-if="!mediaStatus.video" class="media-pending">
-              Pendiente de agregar `intro.mp4`
+              Pendiente de agregar el video de presentación
             </div>
           </div>
 
@@ -495,9 +495,28 @@ onMounted(async () => {
 .media-preview {
   overflow: hidden;
   aspect-ratio: 16 / 9;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  background: #061018;
+  border: 1px solid rgba(49, 213, 255, 0.38);
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(49, 213, 255, 0.2), transparent 28%),
+    linear-gradient(135deg, #031017 0%, #071722 48%, #02070c 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 0 28px rgba(49, 213, 255, 0.16),
+    0 18px 36px rgba(0, 0, 0, 0.38);
+  position: relative;
+}
+
+.media-preview::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 42px;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(3, 16, 23, 0.3), transparent 46%),
+    radial-gradient(circle at 82% 18%, rgba(49, 213, 255, 0.16), transparent 32%);
+  mix-blend-mode: screen;
 }
 
 .media-preview video {
@@ -505,6 +524,9 @@ onMounted(async () => {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(0.86) contrast(1.08) saturate(0.88);
+  position: relative;
+  z-index: 1;
 }
 
 .video-placeholder {
