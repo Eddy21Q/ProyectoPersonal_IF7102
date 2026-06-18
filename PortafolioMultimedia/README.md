@@ -110,6 +110,14 @@ Para generar una version de produccion:
 npm run build
 ```
 
+Para publicar en GitHub Pages:
+
+```sh
+npm run deploy
+```
+
+El comando ejecuta primero el build y luego publica la carpeta `dist` en la rama `gh-pages`.
+
 ---
 
 ## Capturas de Pantalla

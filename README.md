@@ -30,6 +30,17 @@ Luego abrir la URL indicada por Vite, normalmente:
 http://localhost:5173/
 ```
 
+## Publicacion en GitHub Pages
+
+Desde la carpeta del proyecto:
+
+```sh
+cd PortafolioMultimedia
+npm run deploy
+```
+
+Este comando genera la carpeta `dist` y la publica en la rama `gh-pages`.
+
 ## Archivos Importantes
 
 - `PortafolioMultimedia/README.md`: instrucciones completas, capturas y descripcion tecnica.

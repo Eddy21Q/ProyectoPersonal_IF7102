@@ -2,9 +2,9 @@
   "about": {
     "name": "Eddy Josué González Quirós",
     "description": "Soy un informático cuyos intereses se centran en el desarrollo web, las telecomunicaciones y la tecnología en general. Me apasiona aprender nuevas tecnologías y aplicarlas para resolver problemas del mundo real. Mi objetivo es seguir creciendo como desarrollador y como persona, de tal manera que pueda contribuir a proyectos innovadores que tengan un impacto positivo en la sociedad.",
-    "photo": "/imagenes/Captura6_fotopersonal.png",
-    "audio": "/audio/presentacion.mp3",
-    "video": "/video/presentacion-fondo-oscuro.mp4"
+    "photo": "imagenes/Captura6_fotopersonal.png",
+    "audio": "audio/presentacion.mp3",
+    "video": "video/presentacion-fondo-oscuro.mp4"
   },
 
   "skills": [
@@ -43,21 +43,21 @@
   "projects": [
     {
       "title": "Sistema de Declaraciones UCR",
-      "image": "/imagenes/proyecto-declaraciones-ucr.png",
+      "image": "imagenes/proyecto-declaraciones-ucr.png",
       "description": "Sistema web para la gestión de declaraciones juradas institucionales, desarrollado con Laravel y React/Inertia. Permite administrar usuarios, cargos, sedes, unidades académicas, horarios, documentos, notificaciones y exportaciones en PDF, incorporando autenticación, roles y registro de actividad administrativa.",
       "role": "Proyecto colaborativo en el que participé en su desarrollo.",
       "technologies": ["Laravel", "React", "Inertia", "PDF", "Autenticación"]
     },
     {
       "title": "Aurora Boutique",
-      "image": "/imagenes/proyecto-aurora-boutique.png",
+      "image": "imagenes/proyecto-aurora-boutique.png",
       "description": "Aplicación web de e-commerce para una boutique, desarrollada con ASP.NET Core MVC y PostgreSQL. Incluye catálogo, carrito de compras, gestión de clientes, pedidos, pagos, facturación PDF y administración interna mediante una arquitectura por capas.",
       "role": "Proyecto en el que participé en su desarrollo.",
       "technologies": ["ASP.NET Core MVC", "PostgreSQL", "PDF", "E-commerce"]
     },
     {
       "title": "Ruta del Sabor",
-      "image": "/imagenes/proyecto-ruta-del-sabor.png",
+      "image": "imagenes/proyecto-ruta-del-sabor.png",
       "description": "Aplicación web interactiva de turismo gastronómico en Costa Rica, desarrollada con JavaScript moderno, Web Components y ES Modules. Permite explorar destinos mediante una interfaz modular, reutilizable y enfocada en contenido multimedia.",
       "role": "Proyecto en el que participé en su desarrollo.",
       "technologies": ["JavaScript", "Web Components", "ES Modules", "Multimedia"]
