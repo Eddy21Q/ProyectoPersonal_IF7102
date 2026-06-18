@@ -1,0 +1,66 @@
+{
+  "about": {
+    "name": "Eddy Josué González Quirós",
+    "description": "Soy un informático cuyos intereses se centran en el desarrollo web, las telecomunicaciones y la tecnología en general. Me apasiona aprender nuevas tecnologías y aplicarlas para resolver problemas del mundo real. Mi objetivo es seguir creciendo como desarrollador y como persona, de tal manera que pueda contribuir a proyectos innovadores que tengan un impacto positivo en la sociedad.",
+    "photo": "imagenes/Captura6_fotopersonal.png",
+    "audio": "audio/presentacion.mp3",
+    "video": "video/presentacion-fondo-oscuro.mp4"
+  },
+
+  "skills": [
+    {
+      "name": "Java",
+      "category": "Programación",
+      "description": "Práctica académica con métodos, arreglos, matrices, menús por consola y estructuras de control."
+    },
+    {
+      "name": "C#",
+      "category": "Programación",
+      "description": "Interacción con aplicaciones .NET y lógica de backend en proyectos académicos."
+    },
+    {
+      "name": "JavaScript",
+      "category": "Frontend",
+      "description": "Creación de interfaces interactivas, manejo de eventos, carga de datos JSON y uso de componentes."
+    },
+    {
+      "name": "SQL",
+      "category": "Bases de datos",
+      "description": "Consultas, gestión de datos e interacción con sistemas conectados a bases de datos."
+    },
+    {
+      "name": "Bases de datos",
+      "category": "Desarrollo técnico",
+      "description": "Interacción con PostgreSQL y organización de información para sistemas web."
+    },
+    {
+      "name": "Vue 3",
+      "category": "Framework frontend",
+      "description": "Uso de componentes, props, eventos, reactividad, ciclo de vida y carga de datos con fetch."
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Sistema de Declaraciones UCR",
+      "image": "imagenes/proyecto-declaraciones-ucr.png",
+      "description": "Sistema web para la gestión de declaraciones juradas institucionales, desarrollado con Laravel y React/Inertia. Permite administrar usuarios, cargos, sedes, unidades académicas, horarios, documentos, notificaciones y exportaciones en PDF, incorporando autenticación, roles y registro de actividad administrativa.",
+      "role": "Proyecto colaborativo en el que participé en su desarrollo.",
+      "technologies": ["Laravel", "React", "Inertia", "PDF", "Autenticación"]
+    },
+    {
+      "title": "Aurora Boutique",
+      "image": "imagenes/proyecto-aurora-boutique.png",
+      "description": "Aplicación web de e-commerce para una boutique, desarrollada con ASP.NET Core MVC y PostgreSQL. Incluye catálogo, carrito de compras, gestión de clientes, pedidos, pagos, facturación PDF y administración interna mediante una arquitectura por capas.",
+      "role": "Proyecto en el que participé en su desarrollo.",
+      "technologies": ["ASP.NET Core MVC", "PostgreSQL", "PDF", "E-commerce"]
+    },
+    {
+      "title": "Ruta del Sabor",
+      "image": "imagenes/proyecto-ruta-del-sabor.png",
+      "description": "Aplicación web interactiva de turismo gastronómico en Costa Rica, desarrollada con JavaScript moderno, Web Components y ES Modules. Permite explorar destinos mediante una interfaz modular, reutilizable y enfocada en contenido multimedia.",
+      "role": "Proyecto en el que participé en su desarrollo.",
+      "technologies": ["JavaScript", "Web Components", "ES Modules", "Multimedia"]
+    }
+  ]
+}
